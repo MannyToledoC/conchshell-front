@@ -1,0 +1,22 @@
+.message-form {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.message-input {
+  width: 1086px;
+  height: 60px;
+  border-radius: 15px;
+  background-color: rgb(24, 24, 24);
+  color: #aaaaaa;
+  border: none;
+  &:active,
+  &:focus {
+    color: #aaaaaa;
+    background-color: rgb(24, 24, 24);
+  }
+}
+.send-button {
+  position: absolute;
+  right: 10px;
+}
