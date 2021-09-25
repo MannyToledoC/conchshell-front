@@ -1,7 +1,11 @@
+import { Button } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
+import { useSelector } from "react-redux";
+
 import "./Header.scss";
 
 function Header() {
+  const account = useSelector((state) => state.account);
   return (
     <header className="project-header">
       <nav className="project-nav">
@@ -19,6 +23,16 @@ function Header() {
         >
           Dashboard
         </NavLink>
+        {account.status === "online" ? (
+          <div className="user">
+            <h5 className="user-name">{account.name}</h5>
+            <Button className="logout" variant="dark">
+              Logout
+            </Button>
+          </div>
+        ) : (
+          ""
+        )}
       </nav>
     </header>
   );

@@ -18,12 +18,14 @@
   width: inherit;
   height: 60px;
   color: #aaaaaa;
-  background-color: inherit;
-  border: none;
+  background-color: inherit !important;
+  border: none !important;
   &:active,
   &:focus {
     color: #aaaaaa;
     background-color: inherit;
+    border: none !important;
+    box-shadow: none;
   }
 }
 .message-user {
