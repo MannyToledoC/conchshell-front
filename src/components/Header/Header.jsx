@@ -15,6 +15,14 @@ function Header() {
         <NavLink exact activeClassName="selected" className="nav-link" to="/about">
           About
         </NavLink>
+        <NavLink
+          exact
+          activeClassName="selected"
+          className="nav-link"
+          to="/dashboard"
+        >
+          Dashboard
+        </NavLink>
         {account.status === "online" ? (
           <div className="user">
             <h5 className="user-name">{account.name}</h5>
